@@ -1,0 +1,72 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "description": "Mulu backend API",
+  "main": "index.js",
+  "scripts": {
+    "preinstall": "npx npm-force-resolutions",
+    "test": "source .env && export NODE_ENV=development && ./test.sh",
+    "start": "node index.js",
+    "local": "source .env && node index.js",
+    "db:migrate:local": "source .env && npx sequelize-cli db:migrate",
+    "db:migrate:staging": "source .envStaging && npx sequelize-cli db:migrate",
+    "db:migrate:prod": "source .envProd && npx sequelize-cli db:migrate"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mulu-eng/api.git"
+  },
+  "author": "Mulu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mulu-eng/api/issues"
+  },
+  "resolutions": {
+    "fs-capacitor": "^6.2.0",
+    "graphql-upload": "^11.0.0"
+  },
+  "homepage": "https://github.com/mulu-eng/api#readme",
+  "dependencies": {
+    "@amplitude/node": "^1.7.0",
+    "@mux/mux-node": "^3.2.1",
+    "agora-access-token": "^2.0.4",
+    "airtable": "^0.10.1",
+    "apollo-server": "^2.21.0",
+    "apollo-server-express": "^2.21.0",
+    "aws-sdk": "^2.934.0",
+    "axios": "^0.26.1",
+    "body-parser": "^1.19.0",
+    "bunyan": "^1.8.15",
+    "cors": "^2.8.5",
+    "docusign-esign": "^5.15.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "ffmpeg-extract-frames": "^2.0.2",
+    "firebase-admin": "^9.10.0",
+    "fs-capacitor": "^6.2.0",
+    "graphql": "^15.5.0",
+    "graphql-iso-date": "^3.6.1",
+    "graphql-resolvers": "^0.4.2",
+    "graphql-scalars": "^1.8.0",
+    "graphql-type-json": "^0.3.2",
+    "is-valid-email": "0.0.5",
+    "isomorphic-fetch": "^3.0.0",
+    "jsonwebtoken": "^8.5.1",
+    "mathjs": "^9.3.2",
+    "md5": "^2.3.0",
+    "moment": "^2.29.1",
+    "morgan": "^1.10.0",
+    "nanoid": "^3.1.22",
+    "pg": "^8.5.1",
+    "plaid": "^9.10.1",
+    "sequelize": "^6.5.0",
+    "sequelize-cli": "^6.2.0",
+    "sqlutils": "^1.4.1",
+    "stripe": "^8.137.0",
+    "tiktok-scraper": "^1.4.22",
+    "twilio": "^3.57.0",
+    "uniqid": "^5.3.0",
+    "unique-names-generator": "^4.6.0",
+    "uuid": "^8.3.2"
+  }
+}
